@@ -1,0 +1,64 @@
+/* style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#chart-container {
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.line {
+    transition: stroke-width 0.2s;
+}
+
+/* Gray out other lines when hovering over one */
+.line-group:hover .line {
+    stroke-opacity: 0.2;
+}
+
+.line-group .line:hover {
+    stroke-opacity: 1;
+    stroke-width: 3;
+}
+
+.axis-label {
+    font-size: 12px;
+    fill: #666;
+}
+
+/* style.css additions */
+.legend-item {
+    cursor: pointer;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.legend-item:hover text {
+    font-weight: bold;
+    fill: #000;
+}
+
+/* Subtle fade for lines when a legend item is hovered */
+.line.faded {
+    stroke-opacity: 0.1;
+}
+
+.line.highlighted {
+    stroke-width: 4;
+    stroke-opacity: 1;
+}
